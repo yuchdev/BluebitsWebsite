@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "title.index": "Logiciel BlueBits",
+    "title.services": "Services BlueBits",
+    "title.tools": "Outils",
+    "title.blog": "Blog",
+    "title.contact": "Contact"
+  },
+  "nav": {
+    "brand": "BlueBits",
+    "services": "Services",
+    "tools": "Outils",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "index": {
+    "hero.kicker": "Studio logiciel",
+    "hero.title": "Créer des logiciels fiables pour des systèmes complexes.",
+    "hero.subtitle": "Nous concevons des outils, des bibliothèques et des applications optimisés pour la performance, la clarté et la maintenabilité à long terme.",
+    "hero.actions.services": "Nos Services",
+    "hero.actions.tools": "Explorer les Outils",
+    "capabilities.title": "Capacités",
+    "capabilities.subtitle": "Domaines principaux où BlueBits offre une valeur d'ingénierie durable.",
+    "capabilities.backend.title": "Backend Haute Performance",
+    "capabilities.backend.text": "Création de solutions côté serveur évolutives et efficaces où la latence, le débit et la fiabilité sont essentiels.",
+    "capabilities.backend.meta": "C++ · Rust · Systèmes distribués",
+    "capabilities.devops.title": "DevOps & Infrastructure",
+    "capabilities.devops.text": "Pipelines CI/CD, infrastructure-as-code, observabilité et automatisation de plateforme adaptés à votre produit et à votre équipe.",
+    "capabilities.devops.meta": "Kubernetes · Terraform · GitHub Actions",
+    "capabilities.tooling.title": "Outils pour Développeurs",
+    "capabilities.tooling.text": "Outils et bibliothèques open-source conçus pour éliminer les frictions dans les flux de travail de développement quotidiens.",
+    "capabilities.tooling.meta": "CLI · Bibliothèques · Automatisation"
+  },
+  "services": {
+    "hero.kicker": "Services",
+    "hero.title": "Services d'ingénierie conçus pour la fiabilité et l'échelle.",
+    "hero.subtitle": "De l'automatisation cloud-native à la sécurisation cryptographique des licences et des pipelines de documents, BlueBits aide les équipes à livrer des systèmes de production robustes.",
+    "offer.title": "Ce que nous offrons",
+    "offer.subtitle": "Trois pistes de services commerciaux conçues autour de besoins réels récurrents.",
+    "track.devops.title": "DevOps, CI & Infrastructure",
+    "track.devops.text": "Conception et mise en œuvre de pipelines CI/CD évolutifs, de bases d'infrastructure-as-code, d'orchestration d'environnement et d'observabilité pour les équipes modernes.",
+    "track.devops.item1": "Création et durcissement de CI/CD",
+    "track.devops.item2": "Bases d'infrastructure Terraform / Pulumi",
+    "track.devops.item3": "Clusters Kubernetes, mise à l'échelle automatique et stratégies de déploiement",
+    "track.devops.diagram.code": "Code",
+    "track.devops.diagram.build": "Construire",
+    "track.devops.diagram.test": "Tester",
+    "track.devops.diagram.image": "Image",
+    "track.devops.diagram.deploy": "Déployer",
+    "track.devops.diagram.observe": "Observer",
+    "track.license.title": "Serveurs de Licences (Cryptographie DSA)"
+  }
+}

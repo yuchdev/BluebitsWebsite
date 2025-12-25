@@ -13,19 +13,15 @@
             <div class="nav-logo">BB</div>
             <div class="nav-title">BlueBits</div>
         </div>
-
         <input type="checkbox" id="nav-toggle"/>
-        <label class="nav-toggle-label" for="nav-toggle">
-            <span></span>
-        </label>
-
+        <label class="nav-toggle-label" for="nav-toggle"><span></span></label>
         <nav class="nav-links">
             <div class="nav-links-inner">
-                <a href="index.html"><span>BlueBits</span></a>
-                <a href="services.html"><span>Services</span></a>
-                <a href="tools.html"><span>Tools &amp; Libraries</span></a>
-                <a href="blog.html" class="active"><span>Blog</span></a>
-                <a href="contact.html"><span>Contact</span></a>
+                <a href="index.html"><span data-i18n="nav.brand">BlueBits</span></a>
+                <a href="services.html"><span data-i18n="nav.services">Services</span></a>
+                <a href="tools.html"><span data-i18n="nav.tools">Tools &amp; Libraries</span></a>
+                <a href="blog.html" class="active"><span data-i18n="nav.blog">Blog</span></a>
+                <a href="contact.html"><span data-i18n="nav.contact">Contact</span></a>
             </div>
         </nav>
     </div>
@@ -35,9 +31,9 @@
     <section class="hero section">
         <div class="hero-grid">
             <div>
-                <div class="hero-kicker">Blog</div>
-                <h1 class="hero-title">Engineering notes, experiments &amp; deep dives.</h1>
-                <p class="hero-subtitle">
+                <div class="hero-kicker" data-i18n="blog.hero.kicker">Blog</div>
+                <h1 class="hero-title" data-i18n="blog.hero.title">Engineering notes, experiments &amp; deep dives.</h1>
+                <p class="hero-subtitle" data-i18n="blog.hero.subtitle">
                     Short, practical essays on systems engineering, software development, digital privacy,
                     and building reliable software products.
                 </p>
@@ -50,37 +46,39 @@
 
     <section class="section">
         <header class="section-header">
-            <h2>Latest articles</h2>
-            <p>Two sample posts to illustrate layout and styling.</p>
+            <h2 data-i18n="blog.articles.title">Latest articles</h2>
+            <p data-i18n="blog.articles.subtitle">Two sample posts to illustrate layout and styling.</p>
         </header>
 
         <div class="blog-list">
             <article class="blog-card">
-                <div class="blog-meta">April 15 · Security · Cryptography</div>
-                <h3 class="blog-title">Using the Digital Signature Algorithm (DSA) for License Verification</h3>
-                <p class="blog-excerpt">
+                <div class="blog-meta" data-i18n="blog.post1.meta">April 15 · Security · Cryptography</div>
+                <h3 class="blog-title" data-i18n="blog.post1.title">Using the Digital Signature Algorithm (DSA) for License Verification</h3>
+                <p class="blog-excerpt" data-i18n="blog.post1.excerpt">
                     How asymmetric signatures can keep your licensing logic on the client side while still
                     letting you retain full control over which builds are allowed to run. We walk through the
                     architecture of a DSA‑backed license server and validation library.
                 </p>
-                <a href="#" class="blog-link">Read article →</a>
+                <a href="#" class="blog-link" data-i18n="blog.links.read">Read article →</a>
             </article>
 
             <article class="blog-card">
-                <div class="blog-meta">March 28 · Privacy · Security</div>
-                <h3 class="blog-title">Migrating to Privacy‑Respecting, Zero‑Knowledge Services</h3>
-                <p class="blog-excerpt">
+                <div class="blog-meta" data-i18n="blog.post2.meta">March 28 · Privacy · Security</div>
+                <h3 class="blog-title" data-i18n="blog.post2.title">Migrating to Privacy‑Respecting, Zero‑Knowledge Services</h3>
+                <p class="blog-excerpt" data-i18n="blog.post2.excerpt">
                     A practical, low‑drama way to move from mainstream ecosystems like Google Drive, Dropbox
                     and Evernote to services that apply zero‑knowledge encryption and minimize data exhaust.
                 </p>
-                <a href="#" class="blog-link">Read article →</a>
+                <a href="#" class="blog-link" data-i18n="blog.links.read">Read article →</a>
             </article>
         </div>
     </section>
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer" data-i18n="footer.blog">
     &copy; 2025 BlueBits Software Studio. Blog entries are placeholder content for prototype.
 </footer>
+<script src="js/i18n.js"></script>
+<script src="js/bootstrap.js"></script>
 </body>
 </html>
