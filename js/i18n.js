@@ -1,7 +1,6 @@
-
 const I18N_CONFIG = {
     defaultLang: 'en',
-    supportedLangs: ['en', 'vi'],
+    supportedLangs: ['en', 'vi', 'fr'], // Added 'fr' for French localization
     storageKey: 'preferred_lang'
 };
 
@@ -23,7 +22,8 @@ function getPreferredLang() {
         return storedLang;
     }
 
-    return I18N_CONFIG.defaultLang;
+    // Ensure default language is English when no parameters are provided
+    return I18N_CONFIG.defaultLang; // Updated to use defaultLang from config
 }
 
 /**
@@ -47,7 +47,11 @@ function setPreferredLang(lang, updateUrl = false) {
 async function loadLocale(lang) {
     try {
         const response = await fetch(`i18n/${lang}.json`);
-        if (!response.ok) throw new Error(`Failed to load ${lang} locale`);
+        if (!response.ok) {
+            console.error(`Failed to load ${lang} locale`);
+            return {};
+        } // Updated to log error instead of throwing
+
         return await response.json();
     } catch (error) {
         console.error(error);
@@ -59,7 +63,29 @@ async function loadLocale(lang) {
  * Resolve nested keys in an object using dot notation.
  */
 function resolveKey(obj, key) {
-    return key.split('.').reduce((prev, curr) => prev ? prev[curr] : undefined, obj);
+    if (!obj || !key) return undefined;
+    
+    // Try direct match first
+    if (obj[key] !== undefined) return obj[key];
+    
+    const parts = key.split('.');
+    let current = obj;
+    
+    for (let i = 0; i < parts.length; i++) {
+        // Try to see if the rest of the key exists as a single key in the current object
+        const remaining = parts.slice(i).join('.');
+        if (current[remaining] !== undefined) {
+            return current[remaining];
+        }
+        
+        // Otherwise, move one level deeper
+        current = current[parts[i]];
+        if (current === undefined || current === null) {
+            break;
+        }
+    }
+    
+    return undefined;
 }
 
 /**
@@ -96,8 +122,7 @@ function applyTranslations(root = document) {
     });
 
     // Update <html lang>
-    const currentLang = localStorage.getItem(I18N_CONFIG.storageKey) || I18N_CONFIG.defaultLang;
-    document.documentElement.lang = currentLang;
+    document.documentElement.lang = localStorage.getItem(I18N_CONFIG.storageKey) || I18N_CONFIG.defaultLang; // Removed redundant variable
 
     // Update <title>
     const pageId = getPageId();
@@ -132,7 +157,6 @@ function getPageId() {
 const i18nExport = {
     getPreferredLang,
     setPreferredLang,
-    loadLocale,
     t,
     applyTranslations,
     getPageId,

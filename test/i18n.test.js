@@ -5,7 +5,10 @@ const i18n = require('../js/i18n.js');
 describe('i18n logic', () => {
     const enData = {
         "nav": { "services": "Services" },
-        "index": { "hero": { "title": "Welcome" } }
+        "index": { 
+            "hero.title": "Welcome",
+            "hero": { "subtitle": "Subtitle" }
+        }
     };
     const viData = {
         "nav": { "services": "Dịch vụ" }
@@ -22,6 +25,14 @@ describe('i18n logic', () => {
 
     it('t() should fallback to English if key missing in current locale', () => {
         expect(i18n.t('index.hero.title')).toBe('Welcome');
+    });
+
+    it('t() should resolve keys with dots even if they are not fully nested', () => {
+        expect(i18n.t('index.hero.title')).toBe('Welcome');
+    });
+
+    it('t() should resolve keys with dots when partially nested', () => {
+        expect(i18n.t('index.hero.subtitle')).toBe('Subtitle');
     });
 
     it('t() should return sentinel if key missing in both locales', () => {
