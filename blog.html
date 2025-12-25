@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>BlueBits Blog – Engineering Notes, Experiments &amp; Deep Dives</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="nav">
+        <div class="nav-brand">
+            <div class="nav-logo">BB</div>
+            <div class="nav-title">BlueBits</div>
+        </div>
+
+        <input type="checkbox" id="nav-toggle"/>
+        <label class="nav-toggle-label" for="nav-toggle">
+            <span></span>
+        </label>
+
+        <nav class="nav-links">
+            <div class="nav-links-inner">
+                <a href="index.html"><span>BlueBits</span></a>
+                <a href="services.html"><span>Services</span></a>
+                <a href="tools.html"><span>Tools &amp; Libraries</span></a>
+                <a href="blog.html" class="active"><span>Blog</span></a>
+                <a href="contact.html"><span>Contact</span></a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="hero section">
+        <div class="hero-grid">
+            <div>
+                <div class="hero-kicker">Blog</div>
+                <h1 class="hero-title">Engineering notes, experiments &amp; deep dives.</h1>
+                <p class="hero-subtitle">
+                    Short, practical essays on systems engineering, software development, digital privacy,
+                    and building reliable software products.
+                </p>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="hero-cube"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <header class="section-header">
+            <h2>Latest articles</h2>
+            <p>Two sample posts to illustrate layout and styling.</p>
+        </header>
+
+        <div class="blog-list">
+            <article class="blog-card">
+                <div class="blog-meta">April 15 · Security · Cryptography</div>
+                <h3 class="blog-title">Using the Digital Signature Algorithm (DSA) for License Verification</h3>
+                <p class="blog-excerpt">
+                    How asymmetric signatures can keep your licensing logic on the client side while still
+                    letting you retain full control over which builds are allowed to run. We walk through the
+                    architecture of a DSA‑backed license server and validation library.
+                </p>
+                <a href="#" class="blog-link">Read article →</a>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-meta">March 28 · Privacy · Security</div>
+                <h3 class="blog-title">Migrating to Privacy‑Respecting, Zero‑Knowledge Services</h3>
+                <p class="blog-excerpt">
+                    A practical, low‑drama way to move from mainstream ecosystems like Google Drive, Dropbox
+                    and Evernote to services that apply zero‑knowledge encryption and minimize data exhaust.
+                </p>
+                <a href="#" class="blog-link">Read article →</a>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    &copy; 2025 BlueBits Software Studio. Blog entries are placeholder content for prototype.
+</footer>
+</body>
+</html>
