@@ -1,2 +1,0 @@
-# BluebitsWebsite
-Bluebits prototype website
