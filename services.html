@@ -21,11 +21,17 @@
 
         <nav class="nav-links">
             <div class="nav-links-inner">
-                <a href="index.html"><span>BlueBits</span></a>
-                <a href="services.html" class="active"><span>Services</span></a>
-                <a href="tools.html"><span>Tools &amp; Libraries</span></a>
-                <a href="blog.html"><span>Blog</span></a>
-                <a href="contact.html"><span>Contact</span></a>
+                <a href="index.html"><span data-i18n="nav.brand">BlueBits</span></a>
+                <a href="services.html" class="active"><span data-i18n="nav.services">Services</span></a>
+                <a href="tools.html"><span data-i18n="nav.tools">Tools &amp; Libraries</span></a>
+                <a href="blog.html"><span data-i18n="nav.blog">Blog</span></a>
+                <a href="contact.html"><span data-i18n="nav.contact">Contact</span></a>
+                <div class="lang-switcher">
+                    <select id="lang-select">
+                        <option value="en">English</option>
+                        <option value="vi">Tiếng Việt</option>
+                    </select>
+                </div>
             </div>
         </nav>
     </div>
@@ -35,9 +41,9 @@
     <section class="hero section">
         <div class="hero-grid">
             <div>
-                <div class="hero-kicker">Services</div>
-                <h1 class="hero-title">Engineering services built for reliability and scale.</h1>
-                <p class="hero-subtitle">
+                <div class="hero-kicker" data-i18n="services.hero.kicker">Services</div>
+                <h1 class="hero-title" data-i18n="services.hero.title">Engineering services built for reliability and scale.</h1>
+                <p class="hero-subtitle" data-i18n="services.hero.subtitle">
                     From cloud‑native automation to cryptographically secure licensing and document pipelines,
                     BlueBits helps teams ship robust production systems.
                 </p>
@@ -50,69 +56,71 @@
 
     <section class="section">
         <header class="section-header">
-            <h2>What we offer</h2>
-            <p>Three commercial service tracks designed around recurring real‑world needs.</p>
+            <h2 data-i18n="services.offer.title">What we offer</h2>
+            <p data-i18n="services.offer.subtitle">Three commercial service tracks designed around recurring real‑world needs.</p>
         </header>
 
         <div class="card-grid">
             <article class="card">
                 <div class="card-icon">☁</div>
-                <h3 class="card-title">DevOps, CI &amp; Infrastructure</h3>
-                <p class="card-text">
+                <h3 class="card-title" data-i18n="services.track.devops.title">DevOps, CI &amp; Infrastructure</h3>
+                <p class="card-text" data-i18n="services.track.devops.text">
                     Design and implementation of scalable CI/CD pipelines, infrastructure‑as‑code baselines,
                     environment orchestration, and observability for modern teams.
                 </p>
                 <ul class="card-text">
-                    <li>CI/CD creation &amp; hardening</li>
-                    <li>Terraform / Pulumi infrastructure baselines</li>
-                    <li>Kubernetes clusters, autoscaling &amp; rollout strategies</li>
+                    <li data-i18n="services.track.devops.item1">CI/CD creation &amp; hardening</li>
+                    <li data-i18n="services.track.devops.item2">Terraform / Pulumi infrastructure baselines</li>
+                    <li data-i18n="services.track.devops.item3">Kubernetes clusters, autoscaling &amp; rollout strategies</li>
                 </ul>
                 <div class="service-diagram" aria-hidden="true">
-                    <span>Code</span>⟶<span>Build</span>⟶<span>Test</span><br>
-                    <span>Image</span>⟶<span>Deploy</span>⟶<span>Observe</span>
+                    <span data-i18n="services.track.devops.diagram.code">Code</span>⟶<span data-i18n="services.track.devops.diagram.build">Build</span>⟶<span data-i18n="services.track.devops.diagram.test">Test</span><br>
+                    <span data-i18n="services.track.devops.diagram.image">Image</span>⟶<span data-i18n="services.track.devops.diagram.deploy">Deploy</span>⟶<span data-i18n="services.track.devops.diagram.observe">Observe</span>
                 </div>
             </article>
 
             <article class="card">
                 <div class="card-icon">🔐</div>
-                <h3 class="card-title">License Servers (DSA Cryptography)</h3>
-                <p class="card-text">
+                <h3 class="card-title" data-i18n="services.track.license.title">License Servers (DSA Cryptography)</h3>
+                <p class="card-text" data-i18n="services.track.license.text">
                     Architecture and implementation of license servers that use asymmetric DSA signatures to
                     validate application licenses both online and offline.
                 </p>
                 <ul class="card-text">
-                    <li>Key management &amp; signing workflows</li>
-                    <li>Offline‑capable license verification</li>
-                    <li>Integration SDKs &amp; sample clients</li>
+                    <li data-i18n="services.track.license.item1">Key management &amp; signing workflows</li>
+                    <li data-i18n="services.track.license.item2">Offline‑capable license verification</li>
+                    <li data-i18n="services.track.license.item3">Integration SDKs &amp; sample clients</li>
                 </ul>
                 <div class="service-diagram" aria-hidden="true">
-                    <span>Server</span>⟶<span>Signed License</span>⟶<span>Client</span><br>
-                    <span>Public Key</span>⟶<span>Verify</span>⟶<span>Access</span>
+                    <span data-i18n="services.track.license.diagram.server">Server</span>⟶<span data-i18n="services.track.license.diagram.signed">Signed License</span>⟶<span data-i18n="services.track.license.diagram.client">Client</span><br>
+                    <span data-i18n="services.track.license.diagram.public">Public Key</span>⟶<span data-i18n="services.track.license.diagram.verify">Verify</span>⟶<span data-i18n="services.track.license.diagram.access">Access</span>
                 </div>
             </article>
 
             <article class="card">
                 <div class="card-icon">✎</div>
-                <h3 class="card-title">AI‑Assisted Document Translation</h3>
-                <p class="card-text">
+                <h3 class="card-title" data-i18n="services.track.ai.title">AI‑Assisted Document Translation</h3>
+                <p class="card-text" data-i18n="services.track.ai.text">
                     End‑to‑end pipelines for translating technical and business documents using AI assistance,
                     with deterministic review and approval stages.
                 </p>
                 <ul class="card-text">
-                    <li>Document ingestion &amp; segmentation</li>
-                    <li>AI draft translation with custom prompts</li>
-                    <li>Human‑in‑the‑loop review and export</li>
+                    <li data-i18n="services.track.ai.item1">Document ingestion &amp; segmentation</li>
+                    <li data-i18n="services.track.ai.item2">AI draft translation with custom prompts</li>
+                    <li data-i18n="services.track.ai.item3">Human‑in‑the‑loop review and export</li>
                 </ul>
                 <div class="service-diagram" aria-hidden="true">
-                    <span>Source Doc</span>⟶<span>AI Draft</span>⟶<span>Review</span>⟶<span>Final Export</span>
+                    <span data-i18n="services.track.ai.diagram.source">Source Doc</span>⟶<span data-i18n="services.track.ai.diagram.draft">AI Draft</span>⟶<span data-i18n="services.track.ai.diagram.review">Review</span>⟶<span data-i18n="services.track.ai.diagram.final">Final Export</span>
                 </div>
             </article>
         </div>
     </section>
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer" data-i18n="footer.services">
     &copy; 2025 BlueBits Software Studio. Services and descriptions are stub content for prototype.
 </footer>
+<script src="js/i18n.js"></script>
+<script src="js/bootstrap.js"></script>
 </body>
 </html>
