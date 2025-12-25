@@ -1,1 +1,1 @@
-console.log('Happy developing ✨')
+// Add the content of index.js here
