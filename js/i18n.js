@@ -161,7 +161,9 @@ const i18nExport = {
     applyTranslations,
     getPageId,
     I18N_CONFIG,
-    setLocaleData
+    setLocaleData,
+    resolveKey,
+    loadLocale
 };
 
 // Global assignments for browser support
@@ -172,4 +174,26 @@ if (typeof window !== 'undefined') {
 // Export for use in other scripts or tests
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = i18nExport;
+}
+
+// Adjust the dynamically injected language switcher to restore its original position
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+    window.addEventListener('DOMContentLoaded', () => {
+        const langSwitcher = document.createElement('div');
+    langSwitcher.className = 'lang-switcher';
+    langSwitcher.innerHTML = `
+        <label for="lang-select"></label>
+        <select id="lang-select">
+            <option value="en">English</option>
+            <option value="vi">Tiếng Việt</option>
+            <option value="fr">Français</option>
+        </select>
+    `;
+
+    // Append the language switcher to the navigation bar
+    const navLinksInner = document.querySelector('.nav-links-inner');
+    if (navLinksInner) {
+        navLinksInner.appendChild(langSwitcher);
+    }
+    });
 }
